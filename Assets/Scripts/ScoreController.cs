@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -22,7 +21,8 @@ public class ScoreController : MonoBehaviour
             molesController.StopMoleMovingCoroutine();
             molesController.ShuffleMoleHoles();
             molesController.StartMoleMovingCoroutine();
-        }    }
+        }
+    }
 
     public void SetScore(int score)
     {

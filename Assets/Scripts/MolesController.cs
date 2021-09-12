@@ -34,8 +34,9 @@ public class MolesController : MonoBehaviour
                 moleHole.HasMoleNow = true;
                 var mole = Instantiate(moleInAHole, moleHole.transform);
                 yield return new WaitForSeconds(1);
-                Destroy(mole);
+                Destroy(mole.gameObject);
                 moleHole.HasMoleNow = false;
+                yield return null;
             }
             yield return null;
         }

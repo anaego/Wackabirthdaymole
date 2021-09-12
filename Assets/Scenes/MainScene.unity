@@ -295,7 +295,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cake: {fileID: 1242942185}
-  cakeSpeed: 5
 --- !u!212 &87762114
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -357,7 +356,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.44, z: 0}
   m_LocalScale: {x: 0.37416804, y: 0.37416804, z: 0.37416804}
-  m_Children: []
+  m_Children:
+  - {fileID: 1242942187}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -473,7 +473,7 @@ RectTransform:
   m_Children:
   - {fileID: 13110616}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -592,7 +592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70.18939, y: -14.392799}
+  m_AnchoredPosition: {x: 82.7, y: -20.7}
   m_SizeDelta: {x: 140.37878, y: 28.785599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470309618
@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -718,6 +719,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -807,10 +824,10 @@ RectTransform:
   m_Father: {fileID: 1121235089}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000066757, y: -0.51921}
-  m_SizeDelta: {x: 173.2872, y: 16.2384}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.0000066757, y: -57.6682}
+  m_SizeDelta: {x: 173.2872, y: 16.238403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &914236993
 MonoBehaviour:
@@ -1064,8 +1081,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059684838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.62, z: 0}
-  m_LocalScale: {x: 0.3892, y: 0.3892, z: 0.3892}
+  m_LocalPosition: {x: 0, y: 2.14, z: 0}
+  m_LocalScale: {x: 0.46415994, y: 0.46415994, z: 0.46415994}
   m_Children:
   - {fileID: 1924726379}
   - {fileID: 298676281}
@@ -1348,6 +1365,8 @@ GameObject:
   - component: {fileID: 1242942186}
   - component: {fileID: 1242942185}
   - component: {fileID: 1242942188}
+  - component: {fileID: 1242942190}
+  - component: {fileID: 1242942189}
   m_Layer: 0
   m_Name: Cake
   m_TagString: Untagged
@@ -1368,6 +1387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreController: {fileID: 13110618}
+  animator: {fileID: 1242942188}
+  cakeSpeed: 5
 --- !u!212 &1242942186
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1427,11 +1448,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242942184}
   m_LocalRotation: {x: -0, y: -0, z: 0.04420747, w: 0.9990224}
-  m_LocalPosition: {x: 1.099, y: -2.898, z: 0}
-  m_LocalScale: {x: 0.3995, y: 0.3995, z: 0.3995}
+  m_LocalPosition: {x: 2.937183, y: 1.4485471, z: 0}
+  m_LocalScale: {x: 1.0677022, y: 1.0677022, z: 1.0677022}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 87762115}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.067}
 --- !u!95 &1242942188
 Animator:
@@ -1452,6 +1473,53 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1242942189
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242942184}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.11, y: 1.87}
+    newSize: {x: 2.11, y: 1.87}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.11, y: 1.87}
+  m_EdgeRadius: 0
+--- !u!50 &1242942190
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242942184}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1308996503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +1952,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924726378
 GameObject:
@@ -2000,7 +2068,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -37.2}
+  m_AnchoredPosition: {x: 0, y: -32.8}
   m_SizeDelta: {x: 97.0995, y: 23.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135169433
@@ -2141,10 +2209,10 @@ RectTransform:
   m_Father: {fileID: 1121235089}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 32.6}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -27.704704}
+  m_SizeDelta: {x: 200, y: 44.5906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135440585
 MonoBehaviour:
@@ -2166,7 +2234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You kinda really suck at this!
+  m_text: "You kinda really \nsuck at this!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2193,7 +2261,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.05
+  m_fontSize: 19.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2263,12 +2331,24 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9219282312293328843, guid: 2d8cc5554fc1ce843bfb08d38ded65f0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.347914
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219282312293328843, guid: 2d8cc5554fc1ce843bfb08d38ded65f0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.347914
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219282312293328843, guid: 2d8cc5554fc1ce843bfb08d38ded65f0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.347914
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219282312293328843, guid: 2d8cc5554fc1ce843bfb08d38ded65f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.61
+      value: -6.53
       objectReference: {fileID: 0}
     - target: {fileID: 9219282312293328843, guid: 2d8cc5554fc1ce843bfb08d38ded65f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.65
+      value: 3.3911
       objectReference: {fileID: 0}
     - target: {fileID: 9219282312293328843, guid: 2d8cc5554fc1ce843bfb08d38ded65f0, type: 3}
       propertyPath: m_LocalPosition.z
