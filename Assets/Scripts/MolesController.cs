@@ -4,7 +4,7 @@ using UnityEngine;
 public class MolesController : MonoBehaviour
 {
     public MoleHole[] moleHoles;
-    public Mole moleInAHole;
+    public HoleMole moleInAHole;
 
     private Coroutine moleMovingCoroutine;
 
