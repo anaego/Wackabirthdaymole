@@ -6,6 +6,7 @@ public class MolesController : MonoBehaviour
     public MoleHole[] moleHoles;
     public HoleMole moleInAHole;
 
+    private HoleMole currentMole;
     private Coroutine moleMovingCoroutine;
 
     private void Start()
@@ -32,9 +33,9 @@ public class MolesController : MonoBehaviour
             foreach (var moleHole in moleHoles)
             {
                 moleHole.HasMoleNow = true;
-                var mole = Instantiate(moleInAHole, moleHole.transform);
+                currentMole = Instantiate(moleInAHole, moleHole.transform);
                 yield return new WaitForSeconds(1);
-                Destroy(mole.gameObject);
+                Destroy(currentMole.gameObject);
                 moleHole.HasMoleNow = false;
                 yield return null;
             }
@@ -48,6 +49,10 @@ public class MolesController : MonoBehaviour
         {
             StopCoroutine(moleMovingCoroutine);
             moleMovingCoroutine = null;
+            if (currentMole != null)
+            {
+                Destroy(currentMole.gameObject);
+            }
         }
     }
 
